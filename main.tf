@@ -4,6 +4,8 @@ resource "helm_release" "delegate" {
   chart            = "harness-delegate-ng"
   namespace        = var.namespace
   create_namespace = var.create_namespace
+  timeout          = var.timeout
+  wait             = var.wait
 
   values = [data.utils_deep_merge_yaml.values.output]
 }
