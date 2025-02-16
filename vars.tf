@@ -117,3 +117,12 @@ variable "values" {
   type        = string
   default     = ""
 }
+
+variable "timeout" {
+  type    = number
+  default = 600
+}
+
+variable "wait"
+type    = bool
+default = true
